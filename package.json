@@ -1,6 +1,6 @@
 {
   "name": "voira-pet",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "为 ChatGPT Work 安装 Voira Q 版宠物素材",
   "type": "module",
   "bin": {

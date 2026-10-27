@@ -8,10 +8,10 @@
 
 已通过Pets创建与列表回读验证，可在当前账号的Pets收藏中找到「Gemini · 星辰猫耳」。
 
-Gemini 已加入当前源码安装器，尚未包含在公开 npm 0.3.0 中。在仓库根目录运行：
+公开 npm 已包含 Gemini，在终端运行：
 
 ```sh
-node bin/voira-pet.mjs install gemini
+npx voira-pet install gemini
 ```
 
 默认写入 CODEX_HOME/pets/voira-gemini，未设置时为 ~/.codex/pets/voira-gemini；支持 --dir 指定其他目录。安装后在支持 v2 自定义宠物的桌面客户端「设置 → Pets」刷新并选择。本地安装不自动同步网页云收藏、不切换活动宠物，不覆盖已有不同内容。

@@ -172,5 +172,5 @@ test("CLI help/list do not install, invalid arguments fail, install resolves COD
   await assert.rejects(exec(process.execPath, [bin, "unknown"], { env }), (error) => error.code === 1);
   assert.match((await exec(process.execPath, [bin, "install", "deepseek"], { env })).stdout, /安装成功/);
   assert.equal(JSON.parse(await readFile(join(home, "pets/voira-deepseek/pet.json"))).spriteVersionNumber, 2);
-  assert.equal((await exec(process.execPath, [bin, "--version"], { env })).stdout.trim(), "0.3.0");
+  assert.equal((await exec(process.execPath, [bin, "--version"], { env })).stdout.trim(), "0.4.0");
 });

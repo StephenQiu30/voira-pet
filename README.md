@@ -35,7 +35,7 @@ Voira Pet 为 ChatGPT Work 制作 Q 版宠物，保存角色立绘、设定卡�
 
 ## 开始使用
 
-需要 **Node.js 20+**。当前公开 npm 版本为 **0.3.0**，支持三位角色：
+需要 **Node.js 20+**。当前公开 npm 版本为 **0.4.0**，支持四位角色：
 
 ```sh
 # 领养温柔的 DeepSeek
@@ -46,38 +46,36 @@ npx voira-pet install chatgpt
 
 # 领养温暖的向日葵 Claude
 npx voira-pet install claude
+
+# 领养灵动的星辰猫耳 Gemini
+npx voira-pet install gemini
 ```
 
-安装后在支持 v2 自定义宠物的桌面客户端「设置 → Pets」中刷新并选择。三者分别写入 `voira-deepseek`、`voira-chatgpt` 和 `voira-claude`；默认父目录为 `~/.codex/pets/`，设置过 `CODEX_HOME` 时使用其 `pets/`。不写角色名时仍安装 DeepSeek。
+安装后在支持 v2 自定义宠物的桌面客户端「设置 → Pets」中刷新并选择。四者分别写入 `voira-deepseek`、`voira-chatgpt`、`voira-claude` 和 `voira-gemini`；默认父目录为 `~/.codex/pets/`，设置过 `CODEX_HOME` 时使用其 `pets/`。不写角色名时仍安装 DeepSeek。
 
 安装器可用 `list` 查看角色，使用 `--dir "/你的/pets目录"` 指定安装位置；相同内容重复安装保持原样，遇到不同的已有内容时停止覆盖。
 
 本地安装不会自动同步网页端 Pets 云收藏，也不会切换活动宠物。网页端需通过支持 v2 的 Pets 创建／导入流程另行添加。
 
-**当前源码已支持 Gemini，尚未包含在公开 npm 0.3.0 中。** 在仓库根目录运行：
-
-```sh
-node bin/voira-pet.mjs install gemini
-```
-
-Gemini 写入独立的 `voira-gemini` 目录，可与前三位并存。
-
 <details>
 <summary>下载 ZIP 或从 GitHub 安装固定版本</summary>
 
-[GitHub Release v0.3.0](https://github.com/StephenQiu30/voira-pet/releases/tag/v0.3.0) 提供 DeepSeek、ChatGPT、Claude 的独立 ZIP、安装用 tgz 与 SHA-256 校验和。将 ZIP 解压后的完整文件夹放入上述 `pets/` 目录，保留 `pet.json` 和 `spritesheet.webp`。
+[GitHub Release v0.4.0](https://github.com/StephenQiu30/voira-pet/releases/tag/v0.4.0) 提供 DeepSeek、ChatGPT、Claude、Gemini 的独立 ZIP、安装用 tgz 与 SHA-256 校验和。将 ZIP 解压后的完整文件夹放入上述 `pets/` 目录，保留 `pet.json` 和 `spritesheet.webp`。
 
 也可直接运行 GitHub tgz。npm 12 需要显式允许本次远程下载（[npm 官方说明](https://docs.npmjs.com/cli/v12/commands/npm-install/#allow-remote)）：
 
 ```sh
 # 领养温柔的 DeepSeek
-npx --yes --allow-remote=root https://github.com/StephenQiu30/voira-pet/releases/download/v0.3.0/voira-pet-0.3.0.tgz install deepseek
+npx --yes --allow-remote=root https://github.com/StephenQiu30/voira-pet/releases/download/v0.4.0/voira-pet-0.4.0.tgz install deepseek
 
 # 领养小龙女 ChatGPT
-npx --yes --allow-remote=root https://github.com/StephenQiu30/voira-pet/releases/download/v0.3.0/voira-pet-0.3.0.tgz install chatgpt
+npx --yes --allow-remote=root https://github.com/StephenQiu30/voira-pet/releases/download/v0.4.0/voira-pet-0.4.0.tgz install chatgpt
 
 # 领养温暖的向日葵 Claude
-npx --yes --allow-remote=root https://github.com/StephenQiu30/voira-pet/releases/download/v0.3.0/voira-pet-0.3.0.tgz install claude
+npx --yes --allow-remote=root https://github.com/StephenQiu30/voira-pet/releases/download/v0.4.0/voira-pet-0.4.0.tgz install claude
+
+# 领养灵动的星辰猫耳 Gemini
+npx --yes --allow-remote=root https://github.com/StephenQiu30/voira-pet/releases/download/v0.4.0/voira-pet-0.4.0.tgz install gemini
 ```
 
 该参数仅作用于本次命令，不修改全局 npm 配置。

@@ -1,11 +1,12 @@
 # 更新记录
 
-## 未发布
+## 0.4.0 - 2026-10-27
 
 ### 新功能
 
-- 完成Gemini · 星辰猫耳v2宠物、九态与十六方向，已通过Pets创建验证并提供GIF／MP4预览。
-- 当前源码安装器支持`install gemini`，可与已有三位独立并存；尚未发布至npm。
+- npm 安装器增加 `install gemini`，与 DeepSeek、ChatGPT、Claude 使用同样的命令，写入独立的 voira-gemini 目录。
+- 发布 Gemini · 星辰猫耳 v2 宠物。
+- GitHub Release v0.4.0 提供四位角色的独立 ZIP，以及与 npm 0.4.0 相同的 tgz。
 
 ## 0.3.0 - 2026-10-27
 

@@ -8,7 +8,7 @@
 
 已通过 Pets 创建与列表回读验证，可在当前账号的 Pets 收藏中找到「Claude · 向日葵」。
 
-公开npm 0.3.0已包含Claude，在终端运行：
+公开 npm 已包含 Claude，在终端运行：
 
 ```sh
 npx voira-pet install claude
