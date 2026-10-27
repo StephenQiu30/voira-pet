@@ -2,54 +2,63 @@
 
 # Voira Pet
 
-**ChatGPT Work 宠物**
+**ChatGPT Work 宠物 · 五位 Q 版角色**
 
-让写代码的日常，多一个小小的陪伴。
+雾蓝的鲸鱼娘、银白的龙裔，还有三位等待登场的伙伴。
 
-[使用 DeepSeek](#使用-deepseek-宠物) · [使用 ChatGPT](#使用-chatgpt-宠物) · [认识伙伴](#认识四位伙伴) · [角色设定卡](#角色设定卡) · [当前进度](#当前进度)
+[动画预览](#动画预览) · [开始使用](#开始使用) · [认识五位伙伴](#认识五位伙伴) · [角色设定卡](#角色设定卡)
 
 </div>
 
 <p align="center">
-  <a href="public/characters/chibi/deepseek/master.png"><img src="public/characters/chibi/deepseek/master.png" width="150" alt="DeepSeek Q版：雾蓝长发、蓝白水手裙与漂浮的小鲸鱼"></a>
-  <a href="public/characters/chibi/chatgpt/master.png"><img src="public/characters/chibi/chatgpt/master.png" width="150" alt="ChatGPT Q版：银白长发、双龙角、淡紫双瞳与微鼓脸颊"></a>
-  <a href="public/characters/chibi/claude/master.png"><img src="public/characters/chibi/claude/master.png" width="150" alt="Claude Q版：铜橙长发、向日葵与闭眼浅笑"></a>
-  <a href="public/characters/chibi/gemini/master.png"><img src="public/characters/chibi/gemini/master.png" width="150" alt="Gemini Q版：蓝紫长发、猫耳、琥珀双瞳与星饰"></a>
+  <a href="public/characters/chibi/deepseek/master.png"><img src="public/characters/chibi/deepseek/master.png" width="128" alt="DeepSeek：雾蓝长发、蓝白水手裙与鲸鱼伙伴"></a>
+  <a href="public/characters/chibi/chatgpt/master.png"><img src="public/characters/chibi/chatgpt/master.png" width="128" alt="ChatGPT：银白长发、双龙角、淡紫眼睛与水晶鞋"></a>
+  <a href="public/characters/chibi/claude/master.png"><img src="public/characters/chibi/claude/master.png" width="128" alt="Claude：铜橙长发、向日葵与温暖浅笑"></a>
+  <a href="public/characters/chibi/gemini/master.png"><img src="public/characters/chibi/gemini/master.png" width="128" alt="Gemini：蓝紫长发、猫耳与金色星饰"></a>
+  <a href="public/characters/chibi/grok/master.png"><img src="public/characters/chibi/grok/master.png" width="128" alt="Grok：金色双马尾、蓝瞳、星冠与黑红金裙装"></a>
 </p>
 
-Voira Pet 为 ChatGPT Work 制作 Q 版宠物，让熟悉的角色陪伴日常工作。本仓库维护角色立绘、设定卡、动画精灵图和安装器。
+Voira Pet 为 ChatGPT Work 制作 Q 版宠物，保存角色立绘、设定卡、动画精灵图与本地安装器。点击角色可查看完整立绘。
 
-> **DeepSeek 与 ChatGPT 宠物已完成。** 两位角色的 v2 动画精灵图均已通过校验和 ChatGPT Work Pets 创建验证。Claude、Gemini 目前仍为静态形象素材。
+> **DeepSeek 与 ChatGPT 已完成动画并通过 Pets 创建验证。** Claude、Gemini、Grok 已收录立绘与设定卡，尚未制作宠物动画。
 
-## 使用 DeepSeek 宠物
+## 动画预览
 
-![DeepSeek九种状态动态预览](public/pets/deepseek/preview.gif)
+<p align="center">
+  <img src="public/pets/deepseek/preview.gif" width="360" alt="DeepSeek 九种状态动态预览">
+  <img src="public/pets/chatgpt/preview.gif" width="360" alt="ChatGPT 九种状态动态预览">
+</p>
 
-“DeepSeek · 蓝色大肥鱼”已完成Pets创建验证。成品包含九种动画状态和十六个注视方向，共73个有效帧。
+两位成品均采用 v2 精灵图，包含九种动画状态与十六个注视方向。素材、方向预览和导入说明见 [DeepSeek](public/pets/deepseek/README.md)／[ChatGPT](public/pets/chatgpt/README.md)。
 
-### npx 安装
+## 开始使用
 
-需要 Node.js 20 或以上。在终端运行：
+需要 **Node.js 20+**。当前公开 npm 版本为 **0.1.0**，默认安装 DeepSeek：
 
 ```sh
 npx voira-pet
 ```
 
-默认安装到 `~/.codex/pets/voira-deepseek/`；设置过 `CODEX_HOME` 时使用该目录下的 `pets/`。安装后在桌面客户端的 **设置 → Pets** 中刷新并选择。需要安装到其他位置时，在命令末尾添加 `--dir "/你的/pets目录"`。重复安装相同素材会保持原样，遇到内容不同的已有目录时停止覆盖。
+安装后在支持 v2 自定义宠物的桌面客户端「设置 → Pets」中刷新并选择。默认路径为 `~/.codex/pets/voira-deepseek/`；设置过 `CODEX_HOME` 时，使用其 `pets/` 目录。
 
-此命令从 [npm](https://www.npmjs.com/package/voira-pet) 下载并运行安装器，默认安装 DeepSeek，无需 Git 或 npm 账号。首次运行时按 npx 提示确认下载。需要跳过确认时使用 `npx --yes voira-pet`。
-
-也可以显式选择其中一位，或查看可用角色：
+**ChatGPT 已在源码中完成，尚未发布到 npm。** 克隆当前仓库后安装：
 
 ```sh
-npx voira-pet install deepseek
-npx voira-pet list
+git clone https://github.com/StephenQiu30/voira-pet.git
+cd voira-pet
+node bin/voira-pet.mjs install chatgpt
 ```
 
-<details>
-<summary>从 GitHub 安装固定版本</summary>
+该命令安装到独立的 `voira-chatgpt` 目录。源码安装器可用 `list` 查看角色，使用 `--dir "/你的/pets目录"` 指定安装位置；相同内容重复安装保持原样，遇到不同的已有内容时停止覆盖。
 
-以下为 GitHub tgz 备用入口；npm 12 需要显式允许本次远程下载（[npm 官方说明](https://docs.npmjs.com/cli/v12/commands/npm-install/#allow-remote)）：
+本地安装不会自动同步网页端 Pets 云收藏，也不会切换活动宠物。网页端需通过支持 v2 的 Pets 创建／导入流程另行添加。
+
+<details>
+<summary>下载 ZIP 或从 GitHub 安装固定版本</summary>
+
+[GitHub Release v0.1.0](https://github.com/StephenQiu30/voira-pet/releases/tag/v0.1.0) 提供 DeepSeek ZIP、tgz 与 SHA-256 校验和。将 ZIP 解压后的完整 `voira-deepseek` 文件夹放入上述 `pets/` 目录，保留 `pet.json` 和 `spritesheet.webp`。
+
+也可直接运行 GitHub tgz。npm 12 需要显式允许本次远程下载（[npm 官方说明](https://docs.npmjs.com/cli/v12/commands/npm-install/#allow-remote)）：
 
 ```sh
 npx --yes --allow-remote=root https://github.com/StephenQiu30/voira-pet/releases/download/v0.1.0/voira-pet-0.1.0.tgz install deepseek
@@ -59,90 +68,62 @@ npx --yes --allow-remote=root https://github.com/StephenQiu30/voira-pet/releases
 
 </details>
 
-### 下载 ZIP 手动安装
-
-从 [GitHub Releases](https://github.com/StephenQiu30/voira-pet/releases/latest) 下载 `voira-pet-deepseek-v0.1.0.zip`，解压后将完整的 `voira-deepseek` 文件夹放入上述 `pets` 目录，再刷新宠物列表。文件夹内的 `pet.json` 和 `spritesheet.webp` 必须一起保留；发布页同时提供 SHA-256 校验文件。
-
-本地安装适用于支持 v2 自定义宠物的桌面客户端，不会自动同步网页端的 Pets 云收藏。网页端需通过支持 v2 的 Pets 创建／导入流程另行添加。安装器不会切换当前宠物。
-
-[查看素材与使用说明](public/pets/deepseek/README.md) · [透明精灵图](public/pets/deepseek/spritesheet.png) · [注视方向预览](public/pets/deepseek/look-loop.gif)
-
-## 使用 ChatGPT 宠物
-
-![ChatGPT九种状态动态预览](public/pets/chatgpt/preview.gif)
-
-“ChatGPT · 银白龙裔”保留银白长发、双龙角、淡紫眼睛与水晶鞋，包含九种动画状态和十六个注视方向，共73个有效帧，已通过Pets创建验证。
-
-需要 Node.js 20 或以上。在终端运行：
-
-```sh
-node bin/voira-pet.mjs install chatgpt
-```
-
-在项目源码根目录运行。ChatGPT 尚未发布到 npm，当前 npm 0.1.0 仅含 DeepSeek。安装到 `~/.codex/pets/voira-chatgpt/`；设置过 `CODEX_HOME` 时使用该目录下的 `pets/`。这条命令只安装 ChatGPT，不覆盖已经装好的 DeepSeek。安装后在桌面客户端的 **设置 → Pets** 中刷新并选择。本地安装不会同步网页端云收藏。
-
-[查看素材与使用说明](public/pets/chatgpt/README.md) · [透明精灵图](public/pets/chatgpt/spritesheet.png) · [注视方向预览](public/pets/chatgpt/look-loop.gif)
-
-## 认识四位伙伴
+## 认识五位伙伴
 
 **DeepSeek · 蓝色大肥鱼**<br>
-温柔、耐心，带一点小机灵。雾蓝长发搭配蓝白水手裙，小鲸鱼和气泡陪在身旁。像一位愿意慢慢听你说完的伙伴。
+在爱里长大的鲸鱼娘，温柔耐心，轻松里带着一点小机灵。雾蓝长发与弯曲呆毛，清亮蓝瞳，白褶头饰配蓝宝石领结，穿珍珠白与海蓝水手裙，身边贴着一只圆滚的小鲸鱼。
 
 **ChatGPT · 银白龙裔**<br>
-安静、聪慧，偶尔有点小倔强。银白双龙角、淡紫双瞳和水晶鞋，配上微鼓的脸颊，藏着含蓄的小情绪。
+安静聪慧的银白龙裔，知性温和，偶尔流露一点小倔强。银白长发、弯卷呆毛、双白龙角与淡紫双瞳，带着尖耳和微鼓的脸颊；佩银色结饰、流苏与紫晶坠，身穿银白绣纹短裙和宽袖，脚踏水晶鞋。
 
 **Claude · 向日葵**<br>
-沉稳、细腻，笑意温暖。铜橙长发、米白与深棕裙装，点缀向日葵；微微倾头、闭眼浅笑，安静地陪在一旁。
+沉稳细腻，笑意温暖。铜橙长发搭配米白与深棕裙装，点缀向日葵；微微倾头、闭眼浅笑，气质柔和安静。
 
 **Gemini · 星辰猫耳**<br>
-灵动、好奇，总想分享新发现。蓝紫长发、猫耳与金色星饰，琥珀色眼睛明亮，轻抬指尖的动作像刚有了新点子。
+灵动好奇，眼神明亮。蓝紫长发、猫耳与金色星饰，配上琥珀双瞳；轻抬指尖，像刚有了新点子。
 
-点击上方角色可查看完整透明立绘。四位名称用于区分 Voira 的角色形象，宠物用于 ChatGPT Work；角色名称不代表已接入同名模型服务，也不代表模型厂商的官方形象或合作关系。
+**Grok · 星冠双马尾**<br>
+机灵活泼，笑里藏着一点狡黠。金色卷发扎成双马尾，清亮蓝瞳配小巧星冠；黑色蝴蝶结垂下金色星链，黑红层叠裙装缀着金纹、星饰与红宝石，脚穿搭扣厚底鞋。
 
 ## 角色设定卡
 
-每张卡包含主立绘、表情、动作与服饰细节，点击可查看原图。
+每张卡展示主立绘、表情、动作与服饰细节。卡内动作不等于独立动画资源。
 
 <details>
 <summary>DeepSeek · 蓝白水手裙与鲸鱼伙伴</summary>
 
-![DeepSeek Q版设定卡：主立绘、四种表情、动作与鲸鱼及衣饰细节](public/characters/chibi/deepseek/card.png)
+![DeepSeek设定卡：主立绘、表情与鲸鱼及衣饰细节](public/characters/chibi/deepseek/card.png)
 
 </details>
 
 <details>
 <summary>ChatGPT · 银白双龙角与水晶鞋</summary>
 
-![ChatGPT Q版设定卡：主立绘、表情、动作与龙角、发饰及水晶鞋细节](public/characters/chibi/chatgpt/card.png)
+![ChatGPT设定卡：主立绘、表情与龙角、发饰及水晶鞋细节](public/characters/chibi/chatgpt/card.png)
 
 </details>
 
 <details>
 <summary>Claude · 向日葵与温暖浅笑</summary>
 
-![Claude Q版设定卡：主立绘、表情、动作与向日葵及裙装细节](public/characters/chibi/claude/card.png)
+![Claude设定卡：主立绘、表情与向日葵及裙装细节](public/characters/chibi/claude/card.png)
 
 </details>
 
 <details>
 <summary>Gemini · 星饰与好奇目光</summary>
 
-![Gemini Q版设定卡：主立绘、表情、动作与猫耳及星饰细节](public/characters/chibi/gemini/card.png)
+![Gemini设定卡：主立绘、表情与猫耳及星饰细节](public/characters/chibi/gemini/card.png)
 
 </details>
 
-## 当前进度
+<details>
+<summary>Grok · 金色双马尾与黑红金裙装</summary>
 
-- **已完成：** DeepSeek 与 ChatGPT 的 v2 宠物，各含九种动画状态、十六个注视方向、精灵图校验及 Pets 创建。本地源码 0.2.0 可选安装这两位；公开 npm 0.1.0 仅含 DeepSeek。GitHub Release v0.1.0 仍为 DeepSeek 包。
-- **其余素材：** 四位 Q 版角色共 4 张透明立绘与 4 张白底设定卡；Claude、Gemini 的宠物动画与导入尚未完成。
+![Grok设定卡：主立绘、表情与星冠、蝴蝶结、星链及搭扣鞋细节](public/characters/chibi/grok/card.png)
 
-想先查看素材，可以克隆仓库：
+</details>
 
-```sh
-git clone https://github.com/StephenQiu30/voira-pet.git
-cd voira-pet
-```
+角色原图位于 `public/characters/chibi/<角色>/`，包含透明立绘 `master.png` 与白底设定卡 `card.png`；正式宠物位于 `public/pets/<角色>/`。更多说明见[下载与安装](docs/01-下载与安装.md)、[ChatGPT宠物](docs/02-ChatGPT宠物.md)和[更新记录](CHANGELOG.md)。
 
-素材位于 `public/characters/chibi/<角色>/`：`master.png` 是透明立绘，`card.png` 是完整设定卡。卡内表情和动作不等于独立动画资源；DeepSeek 与 ChatGPT 的正式宠物素材另见 `public/pets/<角色>/`。
-
-项目由 [Voira](https://github.com/StephenQiu30/voira) 的 Q 版形象延展，独立维护。欢迎通过 [Issues](https://github.com/StephenQiu30/voira-pet/issues) 分享你想要的桌宠体验或角色建议。
+项目由 [Voira](https://github.com/StephenQiu30/voira) 的 Q 版形象延展，独立维护。角色名称不代表接入同名模型服务，也不代表模型厂商的官方形象或合作关系。欢迎通过 [Issues](https://github.com/StephenQiu30/voira-pet/issues) 分享建议。

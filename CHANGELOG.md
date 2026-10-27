@@ -4,6 +4,7 @@
 
 ### 新功能
 
+- 收录Grok Q版立绘与设定卡，README展示五位角色、两位动画成品与各自的人设。
 - npm 安装可选 DeepSeek 或 ChatGPT。无参数时仍默认安装 DeepSeek；`install chatgpt` 安装到独立目录，不覆盖已有的另一位角色。
 - 发布 ChatGPT · 银白龙裔 v2 宠物。
 
