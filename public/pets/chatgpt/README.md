@@ -6,10 +6,10 @@ ChatGPT Work Q版宠物，已通过Pets创建与列表回读验证。保留[原�
 
 ## 使用与文件
 
-当前公开npm 0.1.0尚不含ChatGPT。请在项目源码根目录运行以下命令，然后在支持v2自定义宠物的桌面客户端「设置 → Pets」刷新并选择。
+使用公开npm 0.2.0，在终端运行以下命令，然后在支持v2自定义宠物的桌面客户端「设置 → Pets」刷新并选择。
 
 ```sh
-node bin/voira-pet.mjs install chatgpt
+npx voira-pet install chatgpt
 ```
 
 默认路径为CODEX_HOME/pets/voira-chatgpt，未设置CODEX_HOME时为~/.codex/pets/voira-chatgpt。该命令不安装或覆盖DeepSeek。本地安装不会自动同步网页云收藏；网页端需通过支持v2的Pets创建／导入流程添加。

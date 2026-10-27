@@ -33,7 +33,7 @@ Voira Pet 为 ChatGPT Work 制作 Q 版宠物，保存角色立绘、设定卡�
 
 ## 开始使用
 
-需要 **Node.js 20+**。当前公开 npm 版本为 **0.1.0**，默认安装 DeepSeek：
+需要 **Node.js 20+**。当前公开 npm 版本为 **0.2.0**，默认安装 DeepSeek：
 
 ```sh
 npx voira-pet
@@ -41,15 +41,13 @@ npx voira-pet
 
 安装后在支持 v2 自定义宠物的桌面客户端「设置 → Pets」中刷新并选择。默认路径为 `~/.codex/pets/voira-deepseek/`；设置过 `CODEX_HOME` 时，使用其 `pets/` 目录。
 
-**ChatGPT 已在源码中完成，尚未发布到 npm。** 克隆当前仓库后安装：
+**也可以直接选择 ChatGPT：**
 
 ```sh
-git clone https://github.com/StephenQiu30/voira-pet.git
-cd voira-pet
-node bin/voira-pet.mjs install chatgpt
+npx voira-pet install chatgpt
 ```
 
-该命令安装到独立的 `voira-chatgpt` 目录。源码安装器可用 `list` 查看角色，使用 `--dir "/你的/pets目录"` 指定安装位置；相同内容重复安装保持原样，遇到不同的已有内容时停止覆盖。
+该命令安装到独立的 `voira-chatgpt` 目录。安装器可用 `list` 查看角色，使用 `--dir "/你的/pets目录"` 指定安装位置；相同内容重复安装保持原样，遇到不同的已有内容时停止覆盖。
 
 本地安装不会自动同步网页端 Pets 云收藏，也不会切换活动宠物。网页端需通过支持 v2 的 Pets 创建／导入流程另行添加。
 
