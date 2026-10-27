@@ -5,7 +5,8 @@ import { installPet, pets } from "./installer.mjs";
 const help = `Voira Pet — ChatGPT Work 本地宠物安装器
 
 用法：
-  voira-pet install [deepseek|chatgpt] [--dir <pets目录>]
+  voira-pet install deepseek [--dir <pets目录>]
+  voira-pet install chatgpt [--dir <pets目录>]
   voira-pet list
   voira-pet --help
   voira-pet --version

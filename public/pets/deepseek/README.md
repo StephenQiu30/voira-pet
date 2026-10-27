@@ -6,7 +6,13 @@ ChatGPT Work Q版宠物，保留雾蓝长发、蓝白水手裙、蓝瞳、呆毛
 
 ## 使用与文件
 
-“DeepSeek · 蓝色大肥鱼”已通过Pets创建验证。桌面客户端可通过[项目首页的npx或ZIP安装说明](../../../README.md#npx-安装)安装到本地pets目录，再在设置中刷新并选择；网页端云收藏需要通过支持v2的Pets创建／导入流程另行添加。本地安装不会同步云收藏或切换活动宠物。
+“DeepSeek · 蓝色大肥鱼”已通过Pets创建验证。在终端运行：
+
+```sh
+npx voira-pet install deepseek
+```
+
+然后在桌面客户端「设置 → Pets」刷新并选择。说明见[项目首页](../../../README.md#开始使用)。网页端云收藏需要通过支持v2的Pets创建／导入流程另行添加。本地安装不会同步云收藏或切换活动宠物。
 
 - [pet.json](pet.json)：本地安装manifest，声明v2、显示名称和精灵图相对路径；须与WebP一起放入voira-deepseek目录。
 - [spritesheet.png](spritesheet.png)：透明PNG，1536×2288，8列×11行，单格192×208，共73个有效帧。
