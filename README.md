@@ -39,6 +39,14 @@ npx --yes https://github.com/StephenQiu30/voira-pet/releases/download/v0.1.0/voi
 
 此命令直接使用 GitHub 发布的安装包，无需 Git 或 npm 账号。目前尚未发布到 npm registry，不能使用简写 `npx voira-pet`。
 
+如果使用 npm 12，远程包默认关闭，需为本次命令显式允许下载（[npm 官方说明](https://docs.npmjs.com/cli/v12/commands/npm-install/#allow-remote)）：
+
+```sh
+npx --yes --allow-remote=root https://github.com/StephenQiu30/voira-pet/releases/download/v0.1.0/voira-pet-0.1.0.tgz install deepseek
+```
+
+该参数仅作用于本次命令，不修改全局 npm 配置。
+
 ### 下载 ZIP 手动安装
 
 从 [GitHub Releases](https://github.com/StephenQiu30/voira-pet/releases/latest) 下载 `voira-pet-deepseek-v0.1.0.zip`，解压后将完整的 `voira-deepseek` 文件夹放入上述 `pets` 目录，再刷新宠物列表。文件夹内的 `pet.json` 和 `spritesheet.webp` 必须一起保留；发布页同时提供 SHA-256 校验文件。
