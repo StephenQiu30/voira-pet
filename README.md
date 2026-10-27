@@ -32,20 +32,32 @@ Voira Pet 为 ChatGPT Work 制作 Q 版宠物，让熟悉的角色陪伴日常�
 需要 Node.js 20 或以上。在终端运行：
 
 ```sh
-npx --yes https://github.com/StephenQiu30/voira-pet/releases/download/v0.1.0/voira-pet-0.1.0.tgz install deepseek
+npx voira-pet
 ```
 
 默认安装到 `~/.codex/pets/voira-deepseek/`；设置过 `CODEX_HOME` 时使用该目录下的 `pets/`。安装后在桌面客户端的 **设置 → Pets** 中刷新并选择。需要安装到其他位置时，在命令末尾添加 `--dir "/你的/pets目录"`。重复安装相同素材会保持原样，遇到内容不同的已有目录时停止覆盖。
 
-此命令直接使用 GitHub 发布的安装包，无需 Git 或 npm 账号。目前尚未发布到 npm registry，不能使用简写 `npx voira-pet`。
+此命令从 [npm](https://www.npmjs.com/package/voira-pet) 下载并运行安装器，默认安装 DeepSeek，无需 Git 或 npm 账号。首次运行时按 npx 提示确认下载。需要跳过确认时使用 `npx --yes voira-pet`。
 
-如果使用 npm 12，远程包默认关闭，需为本次命令显式允许下载（[npm 官方说明](https://docs.npmjs.com/cli/v12/commands/npm-install/#allow-remote)）：
+也可以显式指定宠物或查看可用角色：
+
+```sh
+npx voira-pet install deepseek
+npx voira-pet list
+```
+
+<details>
+<summary>从 GitHub 安装固定版本</summary>
+
+以下为 GitHub tgz 备用入口；npm 12 需要显式允许本次远程下载（[npm 官方说明](https://docs.npmjs.com/cli/v12/commands/npm-install/#allow-remote)）：
 
 ```sh
 npx --yes --allow-remote=root https://github.com/StephenQiu30/voira-pet/releases/download/v0.1.0/voira-pet-0.1.0.tgz install deepseek
 ```
 
 该参数仅作用于本次命令，不修改全局 npm 配置。
+
+</details>
 
 ### 下载 ZIP 手动安装
 
