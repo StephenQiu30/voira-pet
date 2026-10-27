@@ -4,7 +4,7 @@
 
 **ChatGPT Work 宠物 · 五位 Q 版角色**
 
-雾蓝的鲸鱼娘、银白的龙裔，还有三位等待登场的伙伴。
+雾蓝的鲸鱼娘、银白的龙裔与温暖的向日葵，还有两位等待登场的伙伴。
 
 [动画预览](#动画预览) · [开始使用](#开始使用) · [认识五位伙伴](#认识五位伙伴) · [角色设定卡](#角色设定卡)
 
@@ -20,20 +20,21 @@
 
 Voira Pet 为 ChatGPT Work 制作 Q 版宠物，保存角色立绘、设定卡、动画精灵图与本地安装器。点击角色可查看完整立绘。
 
-> **DeepSeek 与 ChatGPT 已完成动画并通过 Pets 创建验证。** Claude、Gemini、Grok 已收录立绘与设定卡，尚未制作宠物动画。
+> **DeepSeek、ChatGPT 与 Claude 已完成动画并通过 Pets 创建验证。** Gemini、Grok 已收录立绘与设定卡，尚未制作宠物动画。
 
 ## 动画预览
 
 <p align="center">
   <img src="public/pets/deepseek/preview.gif" width="360" alt="DeepSeek 九种状态动态预览">
   <img src="public/pets/chatgpt/preview.gif" width="360" alt="ChatGPT 九种状态动态预览">
+  <img src="public/pets/claude/preview.gif" width="360" alt="Claude 九种状态动态预览">
 </p>
 
-两位成品均采用 v2 精灵图，包含九种动画状态与十六个注视方向。素材、方向预览和导入说明见 [DeepSeek](public/pets/deepseek/README.md)／[ChatGPT](public/pets/chatgpt/README.md)。
+三位成品均采用 v2 精灵图，包含九种动画状态与十六个注视方向。素材、方向预览和导入说明见 [DeepSeek](public/pets/deepseek/README.md)／[ChatGPT](public/pets/chatgpt/README.md)／[Claude](public/pets/claude/README.md)。
 
 ## 开始使用
 
-需要 **Node.js 20+**。当前公开 npm 版本为 **0.2.0**。两位角色使用同样的安装命令：
+需要 **Node.js 20+**。当前公开 npm 版本为 **0.3.0**，支持三位角色：
 
 ```sh
 # 领养温柔的 DeepSeek
@@ -41,9 +42,12 @@ npx voira-pet install deepseek
 
 # 领养小龙女 ChatGPT
 npx voira-pet install chatgpt
+
+# 领养温暖的向日葵 Claude
+npx voira-pet install claude
 ```
 
-安装后在支持 v2 自定义宠物的桌面客户端「设置 → Pets」中刷新并选择。DeepSeek 写入 `~/.codex/pets/voira-deepseek/`，ChatGPT 写入 `~/.codex/pets/voira-chatgpt/`；设置过 `CODEX_HOME` 时，使用其 `pets/` 目录。不写角色名时仍安装 DeepSeek。
+安装后在支持 v2 自定义宠物的桌面客户端「设置 → Pets」中刷新并选择。三者分别写入 `voira-deepseek`、`voira-chatgpt` 和 `voira-claude`；默认父目录为 `~/.codex/pets/`，设置过 `CODEX_HOME` 时使用其 `pets/`。不写角色名时仍安装 DeepSeek。
 
 安装器可用 `list` 查看角色，使用 `--dir "/你的/pets目录"` 指定安装位置；相同内容重复安装保持原样，遇到不同的已有内容时停止覆盖。
 
@@ -73,7 +77,7 @@ npx --yes --allow-remote=root https://github.com/StephenQiu30/voira-pet/releases
 安静聪慧的银白龙裔，知性温和，偶尔流露一点小倔强。银白长发、弯卷呆毛、双白龙角与淡紫双瞳，带着尖耳和微鼓的脸颊；佩银色结饰、流苏与紫晶坠，身穿银白绣纹短裙和宽袖，脚踏水晶鞋。
 
 **Claude · 向日葵**<br>
-沉稳细腻，笑意温暖。铜橙长发搭配米白与深棕裙装，点缀向日葵；微微倾头、闭眼浅笑，气质柔和安静。
+沉稳细腻的向日葵少女，温柔含蓄，笑意温暖。铜橙色长卷发与弯卷呆毛，暖琥珀双瞳，侧边编发缀着向日葵与深棕蝴蝶结；身穿米白花纹短裙、深棕层叠裙摆和泡泡袖，搭配白袜与棕色搭扣鞋。
 
 **Gemini · 星辰猫耳**<br>
 灵动好奇，眼神明亮。蓝紫长发、猫耳与金色星饰，配上琥珀双瞳；轻抬指尖，像刚有了新点子。
@@ -120,6 +124,6 @@ npx --yes --allow-remote=root https://github.com/StephenQiu30/voira-pet/releases
 
 </details>
 
-角色原图位于 `public/characters/chibi/<角色>/`，包含透明立绘 `master.png` 与白底设定卡 `card.png`；正式宠物位于 `public/pets/<角色>/`。更多说明见[下载与安装](docs/01-下载与安装.md)、[ChatGPT宠物](docs/02-ChatGPT宠物.md)和[更新记录](CHANGELOG.md)。
+角色原图位于 `public/characters/chibi/<角色>/`，包含透明立绘 `master.png` 与白底设定卡 `card.png`；正式宠物位于 `public/pets/<角色>/`。更多说明见[下载与安装](docs/01-下载与安装.md)、[ChatGPT宠物](docs/02-ChatGPT宠物.md)、[Claude宠物](docs/03-Claude宠物.md)和[更新记录](CHANGELOG.md)。
 
 项目由 [Voira](https://github.com/StephenQiu30/voira) 的 Q 版形象延展，独立维护。角色名称不代表接入同名模型服务，也不代表模型厂商的官方形象或合作关系。欢迎通过 [Issues](https://github.com/StephenQiu30/voira-pet/issues) 分享建议。

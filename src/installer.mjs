@@ -16,6 +16,12 @@ export const pets = Object.freeze([
     name: "ChatGPT · 银白龙裔",
     sha256: "8fdf1c28db60b68860ea0b7946fe849dd31bb0005e1d785c9a44286d0df06688",
   }),
+  Object.freeze({
+    key: "claude",
+    id: "voira-claude",
+    name: "Claude · 向日葵",
+    sha256: "0138381d414a3cb0ead6e3d3dfc60ff2a553dbcbbfa48087590d5c55acb807fe",
+  }),
 ]);
 
 const hash = (bytes) => createHash("sha256").update(bytes).digest("hex");
