@@ -10,6 +10,12 @@ export const pets = Object.freeze([
     name: "DeepSeek · 蓝色大肥鱼",
     sha256: "b0ceb29325ab05042cb3871b61c7bc3b6e206235336ebf3d4ce61c378465dc4f",
   }),
+  Object.freeze({
+    key: "chatgpt",
+    id: "voira-chatgpt",
+    name: "ChatGPT · 银白龙裔",
+    sha256: "8fdf1c28db60b68860ea0b7946fe849dd31bb0005e1d785c9a44286d0df06688",
+  }),
 ]);
 
 const hash = (bytes) => createHash("sha256").update(bytes).digest("hex");

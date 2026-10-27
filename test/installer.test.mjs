@@ -33,7 +33,7 @@ test("installs a complete supported v2 package into a path containing spaces and
   assert.deepEqual(manifest, {
     id: "voira-deepseek",
     displayName: "DeepSeek · 蓝色大肥鱼",
-    description: "雾蓝长发、蓝白水手裙与贴身小鲸鱼伙伴，温柔耐心，略带小机灵。",
+    description: "在爱里长大的鲸鱼娘，温柔耐心，轻松里带着一点小机灵。雾蓝长发与弯曲呆毛，清亮蓝瞳，白褶头饰配蓝宝石领结，穿珍珠白与海蓝水手裙，身边贴着一只圆滚的小鲸鱼。",
     spriteVersionNumber: 2,
     spritesheetPath: "spritesheet.webp",
   });
@@ -55,6 +55,25 @@ test("reinstall is a no-op and preserves user-added metadata and files", async (
   assert.equal((await stat(path)).mtimeMs, before.mtimeMs);
   assert.equal(JSON.parse(await readFile(path)).category, "my-favorites");
   assert.equal(await readFile(join(first.directory, "note.txt"), "utf8"), "保留我的文件");
+});
+
+test("ChatGPT and default DeepSeek install separately and preserve each other's files", async (t) => {
+  const directory = await temporary(t);
+  const deepseek = await installPet(undefined, { directory });
+  const deepseekBytes = await readFile(join(deepseek.directory, "pet.json"));
+  const chatgpt = await installPet("chatgpt", { directory });
+  assert.equal(chatgpt.directory, join(directory, "voira-chatgpt"));
+  const manifest = JSON.parse(await readFile(join(chatgpt.directory, "pet.json")));
+  assert.equal(manifest.id, "voira-chatgpt");
+  assert.equal(manifest.displayName, "ChatGPT · 银白龙裔");
+  assert.equal(manifest.spriteVersionNumber, 2);
+  const sprite = await readFile(join(chatgpt.directory, manifest.spritesheetPath));
+  assert.equal(createHash("sha256").update(sprite).digest("hex"), "8fdf1c28db60b68860ea0b7946fe849dd31bb0005e1d785c9a44286d0df06688");
+  assert.deepEqual(await readFile(join(deepseek.directory, "pet.json")), deepseekBytes);
+  const before = await stat(join(chatgpt.directory, "pet.json"));
+  assert.equal((await installPet("chatgpt", { directory })).alreadyInstalled, true);
+  assert.equal((await stat(join(chatgpt.directory, "pet.json"))).mtimeMs, before.mtimeMs);
+  assert.match((await exec(process.execPath, [bin, "list"])).stdout, /chatgpt\s+ChatGPT · 银白龙裔/);
 });
 
 test("existing unrelated or incomplete target is never overwritten", async (t) => {
@@ -104,5 +123,5 @@ test("CLI help/list do not install, invalid arguments fail, install resolves COD
   await assert.rejects(exec(process.execPath, [bin, "unknown"], { env }), (error) => error.code === 1);
   assert.match((await exec(process.execPath, [bin, "install", "deepseek"], { env })).stdout, /安装成功/);
   assert.equal(JSON.parse(await readFile(join(home, "pets/voira-deepseek/pet.json"))).spriteVersionNumber, 2);
-  assert.equal((await exec(process.execPath, [bin, "--version"], { env })).stdout.trim(), "0.1.0");
+  assert.equal((await exec(process.execPath, [bin, "--version"], { env })).stdout.trim(), "0.2.0");
 });

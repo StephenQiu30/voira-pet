@@ -1,6 +1,6 @@
 {
   "name": "voira-pet",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "为 ChatGPT Work 安装 Voira Q 版宠物素材",
   "type": "module",
   "bin": {
@@ -13,7 +13,9 @@
     "bin/",
     "src/",
     "public/pets/deepseek/pet.json",
-    "public/pets/deepseek/spritesheet.webp"
+    "public/pets/deepseek/spritesheet.webp",
+    "public/pets/chatgpt/pet.json",
+    "public/pets/chatgpt/spritesheet.webp"
   ],
   "scripts": {
     "test": "node --test",

@@ -6,7 +6,7 @@
 
 让写代码的日常，多一个小小的陪伴。
 
-[使用 DeepSeek](#使用-deepseek-宠物) · [认识伙伴](#认识四位伙伴) · [角色设定卡](#角色设定卡) · [当前进度](#当前进度)
+[使用 DeepSeek](#使用-deepseek-宠物) · [使用 ChatGPT](#使用-chatgpt-宠物) · [认识伙伴](#认识四位伙伴) · [角色设定卡](#角色设定卡) · [当前进度](#当前进度)
 
 </div>
 
@@ -19,7 +19,7 @@
 
 Voira Pet 为 ChatGPT Work 制作 Q 版宠物，让熟悉的角色陪伴日常工作。本仓库维护角色立绘、设定卡、动画精灵图和安装器。
 
-> **首个宠物已完成。** DeepSeek 的 v2 动画精灵图已通过校验和 ChatGPT Work Pets 创建验证。ChatGPT、Claude、Gemini 目前仍为静态形象素材。
+> **DeepSeek 与 ChatGPT 宠物已完成。** 两位角色的 v2 动画精灵图均已通过校验和 ChatGPT Work Pets 创建验证。Claude、Gemini 目前仍为静态形象素材。
 
 ## 使用 DeepSeek 宠物
 
@@ -39,7 +39,7 @@ npx voira-pet
 
 此命令从 [npm](https://www.npmjs.com/package/voira-pet) 下载并运行安装器，默认安装 DeepSeek，无需 Git 或 npm 账号。首次运行时按 npx 提示确认下载。需要跳过确认时使用 `npx --yes voira-pet`。
 
-也可以显式指定宠物或查看可用角色：
+也可以显式选择其中一位，或查看可用角色：
 
 ```sh
 npx voira-pet install deepseek
@@ -66,6 +66,22 @@ npx --yes --allow-remote=root https://github.com/StephenQiu30/voira-pet/releases
 本地安装适用于支持 v2 自定义宠物的桌面客户端，不会自动同步网页端的 Pets 云收藏。网页端需通过支持 v2 的 Pets 创建／导入流程另行添加。安装器不会切换当前宠物。
 
 [查看素材与使用说明](public/pets/deepseek/README.md) · [透明精灵图](public/pets/deepseek/spritesheet.png) · [注视方向预览](public/pets/deepseek/look-loop.gif)
+
+## 使用 ChatGPT 宠物
+
+![ChatGPT九种状态动态预览](public/pets/chatgpt/preview.gif)
+
+“ChatGPT · 银白龙裔”保留银白长发、双龙角、淡紫眼睛与水晶鞋，包含九种动画状态和十六个注视方向，共73个有效帧，已通过Pets创建验证。
+
+需要 Node.js 20 或以上。在终端运行：
+
+```sh
+node bin/voira-pet.mjs install chatgpt
+```
+
+在项目源码根目录运行。ChatGPT 尚未发布到 npm，当前 npm 0.1.0 仅含 DeepSeek。安装到 `~/.codex/pets/voira-chatgpt/`；设置过 `CODEX_HOME` 时使用该目录下的 `pets/`。这条命令只安装 ChatGPT，不覆盖已经装好的 DeepSeek。安装后在桌面客户端的 **设置 → Pets** 中刷新并选择。本地安装不会同步网页端云收藏。
+
+[查看素材与使用说明](public/pets/chatgpt/README.md) · [透明精灵图](public/pets/chatgpt/spritesheet.png) · [注视方向预览](public/pets/chatgpt/look-loop.gif)
 
 ## 认识四位伙伴
 
@@ -117,8 +133,8 @@ npx --yes --allow-remote=root https://github.com/StephenQiu30/voira-pet/releases
 
 ## 当前进度
 
-- **已完成：** DeepSeek v2 宠物、九种动画状态、十六个注视方向、精灵图校验及 Pets 创建，提供 GitHub 下载包和 npx 安装器。
-- **其余素材：** 四位 Q 版角色共 4 张透明立绘与 4 张白底设定卡；ChatGPT、Claude、Gemini 的宠物动画与导入尚未完成。
+- **已完成：** DeepSeek 与 ChatGPT 的 v2 宠物，各含九种动画状态、十六个注视方向、精灵图校验及 Pets 创建。本地源码 0.2.0 可选安装这两位；公开 npm 0.1.0 仅含 DeepSeek。GitHub Release v0.1.0 仍为 DeepSeek 包。
+- **其余素材：** 四位 Q 版角色共 4 张透明立绘与 4 张白底设定卡；Claude、Gemini 的宠物动画与导入尚未完成。
 
 想先查看素材，可以克隆仓库：
 
@@ -127,6 +143,6 @@ git clone https://github.com/StephenQiu30/voira-pet.git
 cd voira-pet
 ```
 
-素材位于 `public/characters/chibi/<角色>/`：`master.png` 是透明立绘，`card.png` 是完整设定卡。卡内表情和动作不等于独立动画资源；DeepSeek 的正式宠物素材另见 `public/pets/deepseek/`。
+素材位于 `public/characters/chibi/<角色>/`：`master.png` 是透明立绘，`card.png` 是完整设定卡。卡内表情和动作不等于独立动画资源；DeepSeek 与 ChatGPT 的正式宠物素材另见 `public/pets/<角色>/`。
 
 项目由 [Voira](https://github.com/StephenQiu30/voira) 的 Q 版形象延展，独立维护。欢迎通过 [Issues](https://github.com/StephenQiu30/voira-pet/issues) 分享你想要的桌宠体验或角色建议。
