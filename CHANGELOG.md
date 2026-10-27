@@ -6,6 +6,7 @@
 
 - npm 安装器增加 `install claude`，与 DeepSeek、ChatGPT 使用同样的命令，写入独立的 voira-claude 目录。
 - 发布 Claude · 向日葵 v2 宠物。
+- GitHub Release v0.3.0 提供三位角色的独立 ZIP，以及与 npm 0.3.0 相同的 tgz。
 
 ## 0.2.0 - 2026-10-27
 

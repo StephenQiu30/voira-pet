@@ -56,12 +56,19 @@ npx voira-pet install claude
 <details>
 <summary>下载 ZIP 或从 GitHub 安装固定版本</summary>
 
-[GitHub Release v0.1.0](https://github.com/StephenQiu30/voira-pet/releases/tag/v0.1.0) 提供 DeepSeek ZIP、tgz 与 SHA-256 校验和。将 ZIP 解压后的完整 `voira-deepseek` 文件夹放入上述 `pets/` 目录，保留 `pet.json` 和 `spritesheet.webp`。
+[GitHub Release v0.3.0](https://github.com/StephenQiu30/voira-pet/releases/tag/v0.3.0) 提供 DeepSeek、ChatGPT、Claude 的独立 ZIP、安装用 tgz 与 SHA-256 校验和。将 ZIP 解压后的完整文件夹放入上述 `pets/` 目录，保留 `pet.json` 和 `spritesheet.webp`。
 
 也可直接运行 GitHub tgz。npm 12 需要显式允许本次远程下载（[npm 官方说明](https://docs.npmjs.com/cli/v12/commands/npm-install/#allow-remote)）：
 
 ```sh
-npx --yes --allow-remote=root https://github.com/StephenQiu30/voira-pet/releases/download/v0.1.0/voira-pet-0.1.0.tgz install deepseek
+# 领养温柔的 DeepSeek
+npx --yes --allow-remote=root https://github.com/StephenQiu30/voira-pet/releases/download/v0.3.0/voira-pet-0.3.0.tgz install deepseek
+
+# 领养小龙女 ChatGPT
+npx --yes --allow-remote=root https://github.com/StephenQiu30/voira-pet/releases/download/v0.3.0/voira-pet-0.3.0.tgz install chatgpt
+
+# 领养温暖的向日葵 Claude
+npx --yes --allow-remote=root https://github.com/StephenQiu30/voira-pet/releases/download/v0.3.0/voira-pet-0.3.0.tgz install claude
 ```
 
 该参数仅作用于本次命令，不修改全局 npm 配置。
