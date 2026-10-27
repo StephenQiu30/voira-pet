@@ -22,6 +22,12 @@ export const pets = Object.freeze([
     name: "Claude · 向日葵",
     sha256: "0138381d414a3cb0ead6e3d3dfc60ff2a553dbcbbfa48087590d5c55acb807fe",
   }),
+  Object.freeze({
+    key: "gemini",
+    id: "voira-gemini",
+    name: "Gemini · 星辰猫耳",
+    sha256: "a6a088aae5919b1572f3cb1a72c93fcbc5b0c6e09d0f741e49578229ecd29c57",
+  }),
 ]);
 
 const hash = (bytes) => createHash("sha256").update(bytes).digest("hex");

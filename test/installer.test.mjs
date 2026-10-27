@@ -99,6 +99,32 @@ test("Claude CLI install coexists with both pets and reinstall preserves their f
   assert.match((await exec(process.execPath, [bin, "list"])).stdout, /claude\s+Claude · 向日葵/);
 });
 
+test("Gemini CLI installation preserves three existing pets and is idempotent", async (t) => {
+  const directory = join(await temporary(t), "四位伙伴 pets");
+  const originals = [];
+  for (const key of [undefined, "chatgpt", "claude"]) {
+    const installed = await installPet(key, { directory });
+    for (const name of ["pet.json", "spritesheet.webp"]) {
+      const path = join(installed.directory, name);
+      originals.push([path, await readFile(path)]);
+    }
+  }
+  assert.match((await exec(process.execPath, [bin, "install", "gemini", "--dir", directory])).stdout, /安装成功/);
+  const target = join(directory, "voira-gemini");
+  const manifest = JSON.parse(await readFile(join(target, "pet.json")));
+  assert.equal(manifest.id, "voira-gemini");
+  assert.equal(manifest.displayName, "Gemini · 星辰猫耳");
+  assert.equal(manifest.spriteVersionNumber, 2);
+  assert.equal(manifest.spritesheetPath, "spritesheet.webp");
+  const sprite = await readFile(join(target, manifest.spritesheetPath));
+  assert.equal(createHash("sha256").update(sprite).digest("hex"), "a6a088aae5919b1572f3cb1a72c93fcbc5b0c6e09d0f741e49578229ecd29c57");
+  const before = await stat(join(target, "pet.json"));
+  assert.match((await exec(process.execPath, [bin, "install", "gemini", "--dir", directory])).stdout, /已安装，保持原样/);
+  assert.equal((await stat(join(target, "pet.json"))).mtimeMs, before.mtimeMs);
+  for (const [path, bytes] of originals) assert.deepEqual(await readFile(path), bytes);
+  assert.match((await exec(process.execPath, [bin, "list"])).stdout, /gemini\s+Gemini · 星辰猫耳/);
+});
+
 test("existing unrelated or incomplete target is never overwritten", async (t) => {
   const directory = await temporary(t);
   const target = join(directory, "voira-deepseek");

@@ -17,7 +17,9 @@
     "public/pets/chatgpt/pet.json",
     "public/pets/chatgpt/spritesheet.webp",
     "public/pets/claude/pet.json",
-    "public/pets/claude/spritesheet.webp"
+    "public/pets/claude/spritesheet.webp",
+    "public/pets/gemini/pet.json",
+    "public/pets/gemini/spritesheet.webp"
   ],
   "scripts": {
     "test": "node --test",
