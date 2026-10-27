@@ -1,5 +1,13 @@
 # 更新记录
 
+## 0.5.0 - 2026-10-27
+
+### 新功能
+
+- npm 安装器增加 `install grok`，与 DeepSeek、ChatGPT、Claude、Gemini 使用同样的命令，写入独立的 voira-grok 目录。
+- 发布 Grok · 星冠双马尾 v2 宠物。
+- GitHub Release v0.5.0 提供五位角色的独立 ZIP，以及与 npm 0.5.0 相同的 tgz。
+
 ## 0.4.0 - 2026-10-27
 
 ### 新功能

@@ -125,6 +125,32 @@ test("Gemini CLI installation preserves three existing pets and is idempotent", 
   assert.match((await exec(process.execPath, [bin, "list"])).stdout, /gemini\s+Gemini · 星辰猫耳/);
 });
 
+test("Grok CLI installation preserves four existing pets and reinstalls without changes", async (t) => {
+  const directory = join(await temporary(t), "五位伙伴 pets");
+  const originals = [];
+  for (const key of [undefined, "chatgpt", "claude", "gemini"]) {
+    const installed = await installPet(key, { directory });
+    for (const name of ["pet.json", "spritesheet.webp"]) {
+      const path = join(installed.directory, name);
+      originals.push([path, await readFile(path)]);
+    }
+  }
+  assert.match((await exec(process.execPath, [bin, "install", "grok", "--dir", directory])).stdout, /安装成功/);
+  const target = join(directory, "voira-grok");
+  const manifest = JSON.parse(await readFile(join(target, "pet.json")));
+  assert.equal(manifest.id, "voira-grok");
+  assert.equal(manifest.displayName, "Grok · 星冠双马尾");
+  assert.equal(manifest.spriteVersionNumber, 2);
+  assert.equal(manifest.spritesheetPath, "spritesheet.webp");
+  const sprite = await readFile(join(target, manifest.spritesheetPath));
+  assert.equal(createHash("sha256").update(sprite).digest("hex"), "8177cbc1317ecda9a5ffb7054a969df8c9d54980c02e2d0cbc138f0838968129");
+  const before = await stat(join(target, "pet.json"));
+  assert.match((await exec(process.execPath, [bin, "install", "grok", "--dir", directory])).stdout, /已安装，保持原样/);
+  assert.equal((await stat(join(target, "pet.json"))).mtimeMs, before.mtimeMs);
+  for (const [path, bytes] of originals) assert.deepEqual(await readFile(path), bytes);
+  assert.match((await exec(process.execPath, [bin, "list"])).stdout, /grok\s+Grok · 星冠双马尾/);
+});
+
 test("existing unrelated or incomplete target is never overwritten", async (t) => {
   const directory = await temporary(t);
   const target = join(directory, "voira-deepseek");
@@ -172,5 +198,5 @@ test("CLI help/list do not install, invalid arguments fail, install resolves COD
   await assert.rejects(exec(process.execPath, [bin, "unknown"], { env }), (error) => error.code === 1);
   assert.match((await exec(process.execPath, [bin, "install", "deepseek"], { env })).stdout, /安装成功/);
   assert.equal(JSON.parse(await readFile(join(home, "pets/voira-deepseek/pet.json"))).spriteVersionNumber, 2);
-  assert.equal((await exec(process.execPath, [bin, "--version"], { env })).stdout.trim(), "0.4.0");
+  assert.equal((await exec(process.execPath, [bin, "--version"], { env })).stdout.trim(), "0.5.0");
 });

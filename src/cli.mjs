@@ -9,6 +9,7 @@ const help = `Voira Pet — ChatGPT Work 本地宠物安装器
   voira-pet install chatgpt [--dir <pets目录>]
   voira-pet install claude [--dir <pets目录>]
   voira-pet install gemini [--dir <pets目录>]
+  voira-pet install grok [--dir <pets目录>]
   voira-pet list
   voira-pet --help
   voira-pet --version
