@@ -6,8 +6,9 @@ ChatGPT Work Q版宠物，保留雾蓝长发、蓝白水手裙、蓝瞳、呆毛
 
 ## 使用与文件
 
-“DeepSeek · 蓝色大肥鱼”已通过Pets创建验证。其他用户需导入自己的Pets收藏后，再在Pets列表中选择。导出素材使用v2格式，须通过支持v2精灵图的Pets创建／导入流程使用；这些文件本身不包含聊天服务或独立桌宠程序。
+“DeepSeek · 蓝色大肥鱼”已通过Pets创建验证。桌面客户端可通过[项目首页的npx或ZIP安装说明](../../../README.md#npx-安装)安装到本地pets目录，再在设置中刷新并选择；网页端云收藏需要通过支持v2的Pets创建／导入流程另行添加。本地安装不会同步云收藏或切换活动宠物。
 
+- [pet.json](pet.json)：本地安装manifest，声明v2、显示名称和精灵图相对路径；须与WebP一起放入voira-deepseek目录。
 - [spritesheet.png](spritesheet.png)：透明PNG，1536×2288，8列×11行，单格192×208，共73个有效帧。
 - [spritesheet.webp](spritesheet.webp)：同一精灵图的无损WebP副本。
 - [preview.gif](preview.gif)／[preview.mp4](preview.mp4)：九种动画状态的完整预览。
@@ -21,4 +22,4 @@ ChatGPT Work Q版宠物，保留雾蓝长发、蓝白水手裙、蓝瞳、呆毛
 
 最终PNG通过本地结构检查、动作质量检查、三份独立方向盲评及Pets插件预检，并已创建成功。跳跃峰值离地30像素，回到待机基线；注视中心最大漂移2像素。中间相邻角度变化较细微，两处跨行衔接保留轻微衣饰与轮廓差异。
 
-PNG／WebP用于导入宠物；GIF和MP4仅为预览，不作为导入文件。
+本地安装使用pet.json及WebP；PNG可用于支持v2的Pets创建流程。GIF和MP4仅为预览，不作为导入文件。

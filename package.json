@@ -1,0 +1,31 @@
+{
+  "name": "voira-pet",
+  "version": "0.1.0",
+  "description": "为 ChatGPT Work 安装 Voira Q 版宠物素材",
+  "type": "module",
+  "bin": {
+    "voira-pet": "bin/voira-pet.mjs"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "files": [
+    "bin/",
+    "src/",
+    "public/pets/deepseek/pet.json",
+    "public/pets/deepseek/spritesheet.webp"
+  ],
+  "scripts": {
+    "test": "node --test",
+    "check": "node --check bin/voira-pet.mjs && node --check src/cli.mjs && node --check src/installer.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/StephenQiu30/voira-pet.git"
+  },
+  "homepage": "https://github.com/StephenQiu30/voira-pet#readme",
+  "bugs": {
+    "url": "https://github.com/StephenQiu30/voira-pet/issues"
+  },
+  "keywords": ["chatgpt", "pets", "voira", "chibi"]
+}
