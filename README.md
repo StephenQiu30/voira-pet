@@ -2,11 +2,11 @@
 
 # Voira Pet
 
-**Codex 桌宠服务**
+**ChatGPT Work 宠物**
 
 让写代码的日常，多一个小小的陪伴。
 
-[认识伙伴](#认识四位伙伴) · [角色设定卡](#角色设定卡) · [当前进度](#当前进度)
+[使用 DeepSeek](#使用-deepseek-宠物) · [认识伙伴](#认识四位伙伴) · [角色设定卡](#角色设定卡) · [当前进度](#当前进度)
 
 </div>
 
@@ -17,9 +17,17 @@
   <a href="public/characters/chibi/gemini/master.png"><img src="public/characters/chibi/gemini/master.png" width="150" alt="Gemini Q版：蓝紫长发、猫耳、琥珀双瞳与星饰"></a>
 </p>
 
-Voira Pet 面向使用 Codex 的创作者与开发者，目标是把 Q 版角色带到桌面，成为工作时的小伙伴。本仓库维护桌宠服务及其角色素材。
+Voira Pet 为 ChatGPT Work 制作 Q 版宠物，让熟悉的角色陪伴日常工作。本仓库维护角色立绘、设定卡，以及后续用于 Pets 的动画精灵图和导入说明。
 
-> **项目筹备中。** 首批四位角色的立绘与设定卡已就绪，桌宠程序及 Codex 接入尚未实现，目前没有可安装版本。
+> **首个宠物已完成。** DeepSeek 的 v2 动画精灵图已通过校验和 ChatGPT Work Pets 创建验证。ChatGPT、Claude、Gemini 目前仍为静态形象素材。
+
+## 使用 DeepSeek 宠物
+
+![DeepSeek九种状态动态预览](public/pets/deepseek/preview.gif)
+
+“DeepSeek · 蓝色大肥鱼”已完成Pets创建验证。成品包含九种动画状态和十六个注视方向，共73个有效帧；其他用户需要通过支持v2精灵图的Pets流程导入自己的收藏。
+
+[查看素材与使用说明](public/pets/deepseek/README.md) · [透明精灵图](public/pets/deepseek/spritesheet.png) · [注视方向预览](public/pets/deepseek/look-loop.gif)
 
 ## 认识四位伙伴
 
@@ -35,7 +43,7 @@ Voira Pet 面向使用 Codex 的创作者与开发者，目标是把 Q 版角色
 **Gemini · 星辰猫耳**<br>
 灵动、好奇，总想分享新发现。蓝紫长发、猫耳与金色星饰，琥珀色眼睛明亮，轻抬指尖的动作像刚有了新点子。
 
-点击上方角色可查看完整透明立绘。四位名称用于区分 Voira 的角色形象，桌宠项目围绕 Codex 构建；角色名称不代表已接入同名模型服务，也不代表模型厂商的官方形象或合作关系。
+点击上方角色可查看完整透明立绘。四位名称用于区分 Voira 的角色形象，宠物用于 ChatGPT Work；角色名称不代表已接入同名模型服务，也不代表模型厂商的官方形象或合作关系。
 
 ## 角色设定卡
 
@@ -71,8 +79,8 @@ Voira Pet 面向使用 Codex 的创作者与开发者，目标是把 Q 版角色
 
 ## 当前进度
 
-- **已准备：** 四位 Q 版角色，共 4 张透明立绘与 4 张白底设定卡。
-- **待实现：** Codex 桌宠服务、运行程序与安装说明；技术方案和兼容平台尚未确定。
+- **已完成：** DeepSeek v2 宠物、九种动画状态、十六个注视方向、精灵图校验及 Pets 创建。
+- **其余素材：** 四位 Q 版角色共 4 张透明立绘与 4 张白底设定卡；ChatGPT、Claude、Gemini 的宠物动画与导入尚未完成。
 
 想先查看素材，可以克隆仓库：
 
@@ -81,6 +89,6 @@ git clone https://github.com/StephenQiu30/voira-pet.git
 cd voira-pet
 ```
 
-素材位于 `public/characters/chibi/<角色>/`：`master.png` 是透明立绘，`card.png` 是完整设定卡。卡内表情和动作尚未拆分为独立动画资源。
+素材位于 `public/characters/chibi/<角色>/`：`master.png` 是透明立绘，`card.png` 是完整设定卡。卡内表情和动作不等于独立动画资源；DeepSeek 的正式宠物素材另见 `public/pets/deepseek/`。
 
 项目由 [Voira](https://github.com/StephenQiu30/voira) 的 Q 版形象延展，独立维护。欢迎通过 [Issues](https://github.com/StephenQiu30/voira-pet/issues) 分享你想要的桌宠体验或角色建议。
