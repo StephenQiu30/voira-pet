@@ -1,5 +1,15 @@
 {
   "installCommand": "npm install --prefix site",
   "buildCommand": "npm run build --prefix site",
-  "outputDirectory": "site/out"
+  "outputDirectory": "site/out",
+  "headers": [
+    {
+      "source": "/opengraph-image",
+      "headers": [{ "key": "Content-Type", "value": "image/png" }]
+    },
+    {
+      "source": "/twitter-image",
+      "headers": [{ "key": "Content-Type", "value": "image/png" }]
+    }
+  ]
 }

@@ -1,6 +1,9 @@
 import { pets } from "./pets";
 import { InstallGuide } from "@/components/install-guide";
+import { SiteFaq } from "@/components/site-faq";
 import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { repoUrl } from "@/lib/site";
 import {
   Card,
   CardContent,
@@ -17,14 +20,24 @@ export default function HomePage() {
           ChatGPT Work 宠物
         </Badge>
         <h1 className="text-4xl font-medium tracking-tight sm:text-6xl">
-          五位 Q 版伙伴
+          Voira Pet
         </h1>
+        <p className="text-lg">五位 Q 版伙伴</p>
         <p className="text-lg text-muted-foreground">
           温柔的鲸鱼娘，安静的龙裔，温暖的向日葵，好奇的猫耳少女，还有笑里藏着小机灵的星冠少女。
+        </p>
+        <p className="text-muted-foreground">
+          Voira Pet 是 ChatGPT Work 的 Q 版宠物安装器。运行 npx
+          voira-pet 即可安装，源代码在
+          <Button variant="link" className="h-auto px-1" asChild>
+            <a href={repoUrl}>GitHub 仓库 StephenQiu30/voira-pet</a>
+          </Button>
+          。
         </p>
       </section>
 
       <InstallGuide />
+      <SiteFaq />
 
       <div id="pets" className="flex flex-col gap-16 py-8">
         {pets.map((pet) => (
