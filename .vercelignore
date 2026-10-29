@@ -1,0 +1,12 @@
+.env
+.env.*
+output
+node_modules
+site/node_modules
+site/.next
+site/out
+site/public/pets
+site/AGENTS.md
+articles
+.git
+*.webp
