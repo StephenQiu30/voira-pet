@@ -31,7 +31,7 @@
     "type": "git",
     "url": "git+https://github.com/StephenQiu30/voira-pet.git"
   },
-  "homepage": "https://github.com/StephenQiu30/voira-pet#readme",
+  "homepage": "https://voira-pet.vercel.app",
   "bugs": {
     "url": "https://github.com/StephenQiu30/voira-pet/issues"
   },

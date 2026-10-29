@@ -14,9 +14,9 @@
   <a href="#grok"><img src="public/characters/chibi/grok/master.png" width="104" alt="Grok · 星冠双马尾：金色双马尾、蓝瞳、星冠与黑红金裙装"></a>
 </p>
 
-[开始使用](#开始使用) · [认识五位伙伴](#认识五位伙伴) · [角色设定卡](#角色设定卡) · [下载与文档](#下载与文档)
+[展示页](https://voira-pet.vercel.app) · [开始使用](#开始使用) · [认识五位伙伴](#认识五位伙伴) · [角色设定卡](#角色设定卡) · [下载与文档](#下载与文档)
 
-[npm 0.5.0](https://www.npmjs.com/package/voira-pet) · [GitHub 下载](https://github.com/StephenQiu30/voira-pet/releases/tag/v0.5.0) · Node.js 20+
+[npm 0.5.0](https://www.npmjs.com/package/voira-pet) · [GitHub 仓库](https://github.com/StephenQiu30/voira-pet) · [GitHub 下载](https://github.com/StephenQiu30/voira-pet/releases/tag/v0.5.0) · Node.js 20+
 
 </div>
 
@@ -191,3 +191,9 @@ npx --yes --allow-remote=root https://github.com/StephenQiu30/voira-pet/releases
 | 问题反馈与角色建议 | [GitHub Issues](https://github.com/StephenQiu30/voira-pet/issues) |
 
 角色原图位于 `public/characters/chibi/<角色>/`，正式宠物位于 `public/pets/<角色>/`。本项目由 [Voira](https://github.com/StephenQiu30/voira) 的 Q 版形象延展，独立维护；角色名称不代表接入同名模型服务，也不代表模型厂商的官方形象或合作关系。
+
+## 作者
+
+StephenQiu30 · AI Application Engineer · RAG 与 AI Agent · 上海
+
+[stephenqiu03@gmail.com](mailto:stephenqiu03@gmail.com) · [GitHub](https://github.com/StephenQiu30) · [展示页](https://voira-pet.vercel.app)
