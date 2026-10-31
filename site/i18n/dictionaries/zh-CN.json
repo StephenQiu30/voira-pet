@@ -1,0 +1,137 @@
+{
+  "meta": {
+    "title": "Voira Pet · 五位 Q 版伙伴",
+    "description": "Voira Pet 是 ChatGPT Work 的 Q 版宠物安装器，收录 DeepSeek、ChatGPT、Claude、Gemini 与 Grok 五位原创伙伴。运行 npx voira-pet 即可安装，源代码在 GitHub 仓库 StephenQiu30/voira-pet。",
+    "keywords": ["Voira Pet", "ChatGPT Work", "Q版宠物", "npx voira-pet", "DeepSeek", "ChatGPT", "Claude", "Gemini", "Grok", "StephenQiu30"]
+  },
+  "nav": {
+    "skip": "跳到安装说明",
+    "open": "打开导航",
+    "menu": "目录",
+    "github": "GitHub 仓库",
+    "install": "安装",
+    "switchLocale": "切换到 English"
+  },
+  "home": {
+    "badge": "ChatGPT Work 宠物",
+    "lead": "五位 Q 版伙伴",
+    "intro": "温柔的鲸鱼娘，安静的龙裔，温暖的向日葵，好奇的猫耳少女，还有笑里藏着小机灵的星冠少女。",
+    "sourceBefore": "Voira Pet 是 ChatGPT Work 的 Q 版宠物安装器。运行 npx voira-pet 即可安装，源代码在",
+    "sourceLink": "GitHub 仓库 StephenQiu30/voira-pet",
+    "sourceAfter": "。"
+  },
+  "media": {
+    "traits": "性格",
+    "portraitAlt": "{name} · {epithet}透明立绘",
+    "previewAlt": "{epithet}的动画预览",
+    "previewCaption": "动画预览",
+    "cardAlt": "{name} · {epithet}设定卡，含表情、动作与服饰细节",
+    "cardCaption": "设定卡"
+  },
+  "install": {
+    "title": "如何安装",
+    "introBefore": "需要 Node.js 20 或更高版本。一条命令会把宠物素材装进桌面客户端的本地目录。装好后打开 ",
+    "settings": "设置 → Pets",
+    "introAfter": "，刷新并选择她。安装器不会切换当前正在使用的宠物，本地安装和网页端的 Pets 云收藏也是分开的。",
+    "quick": "快速安装",
+    "choose": "选择伙伴",
+    "zip": "下载安装包",
+    "quickBody": "不带参数时，默认领养 DeepSeek。",
+    "chooseBody": "五位可以分别安装，也可以同时保留。重复安装相同素材时保持原样；如果目标里已有不同内容，安装会停下来，不会覆盖。",
+    "zipBody": "没有 Node.js 时，从 GitHub Release v0.5.0 下载对应角色的独立 ZIP。解压后把完整文件夹放进客户端的 pets 目录，保留其中的 pet.json 和 spritesheet.webp。同一 Release 也提供 npm 安装包和 SHA-256 校验和。",
+    "releaseLink": "打开 GitHub Release v0.5.0",
+    "pathTitle": "安装位置与更多命令",
+    "pathBody": "默认安装到 ~/.codex/pets/。如果设置了 CODEX_HOME，则使用它下面的 pets/ 目录。每位角色保存在独立的 voira-角色名 文件夹中。",
+    "customDir": "npx voira-pet install grok --dir \"/你的/pets目录\"",
+    "githubTitle": "通过 GitHub 安装固定版本",
+    "githubBody": "下面的命令下载 0.5.0 安装包。把最后的 grok 换成其他角色名即可。npm 12 需要 --allow-remote=root 才会允许这次远程下载，它只作用于本次命令，不修改全局 npm 配置。",
+    "npmDocs": "npm 官方说明",
+    "npm": "npm 0.5.0",
+    "download": "GitHub 下载",
+    "issues": "问题反馈",
+    "copy": "复制命令",
+    "copied": "已复制"
+  },
+  "faq": {
+    "title": "常见问题",
+    "items": [
+      {
+        "id": "what",
+        "question": "Voira Pet 是什么？",
+        "answer": "Voira Pet 收录 DeepSeek、ChatGPT、Claude、Gemini 与 Grok 五位原创 Q 版伙伴的立绘、设定卡和动画，并提供本地安装器。角色名只用来区分这五位伙伴，不代表接入同名模型，也不是模型厂商的官方形象。"
+      },
+      {
+        "id": "install",
+        "question": "怎样安装这些宠物？",
+        "answer": "需要 Node.js 20 或更高版本。运行 npx voira-pet 会默认安装 DeepSeek。换成 npx voira-pet install chatgpt、claude、gemini 或 grok 可以安装其他伙伴。五位可以同时保留；目标里已有不同内容时不会覆盖。装好后，在支持 v2 自定义宠物的桌面客户端打开设置 → Pets，刷新并选择。安装器不会切换当前正在使用的宠物。"
+      },
+      {
+        "id": "source",
+        "question": "源代码和素材在哪里？",
+        "answer": "源代码、安装器和正式宠物素材在 GitHub 仓库 https://github.com/StephenQiu30/voira-pet 。展示页是 https://voira-pet.vercel.app 。npm 包是 https://www.npmjs.com/package/voira-pet 。没有 Node.js 时，可以从 GitHub Release v0.5.0 下载对应角色的独立 ZIP。"
+      },
+      {
+        "id": "maintainer",
+        "question": "谁在维护这个项目？",
+        "answer": "作者是 StephenQiu30，在上海做 AI 应用，方向包括 RAG 与 AI Agent。邮箱是 stephenqiu03@gmail.com ，GitHub 主页是 https://github.com/StephenQiu30 。"
+      }
+    ]
+  },
+  "footer": {
+    "disclaimer": "角色名只用来区分这五位原创伙伴，不代表接入同名模型，也不是模型厂商的官方形象。",
+    "role": "AI Application Engineer · RAG 与 AI Agent · 上海"
+  },
+  "theme": {
+    "label": "切换主题",
+    "light": "浅色",
+    "dark": "深色",
+    "system": "跟随系统"
+  },
+  "pets": {
+    "deepseek": {
+      "navLabel": "大肥鱼",
+      "name": "DeepSeek",
+      "epithet": "蓝色大肥鱼",
+      "tagline": "温柔里，藏着一点小机灵。",
+      "persona": "在爱里长大的鲸鱼娘，温柔耐心，轻松里带着一点小机灵。",
+      "appearance": "雾蓝长发与弯曲呆毛，清亮蓝瞳，白褶头饰配蓝宝石领结，穿珍珠白与海蓝水手裙，身边贴着一只圆滚的小鲸鱼。",
+      "traits": ["温柔耐心", "轻松自然", "小机灵"]
+    },
+    "chatgpt": {
+      "navLabel": "龙裔",
+      "name": "ChatGPT",
+      "epithet": "银白龙裔",
+      "tagline": "安静聪慧，偶尔有一点小倔强。",
+      "persona": "安静聪慧的银白龙裔，知性温和，偶尔流露一点小倔强。",
+      "appearance": "银白长发、弯卷呆毛、双白龙角与淡紫双瞳，带着尖耳和微鼓的脸颊；佩银色结饰、流苏与紫晶坠，身穿银白绣纹短裙和宽袖，脚踏水晶鞋。",
+      "traits": ["知性温和", "从容", "小倔强"]
+    },
+    "claude": {
+      "navLabel": "向日葵",
+      "name": "Claude",
+      "epithet": "向日葵",
+      "tagline": "沉稳细腻，笑意温暖。",
+      "persona": "沉稳细腻的向日葵少女，温柔含蓄，笑意温暖。",
+      "appearance": "铜橙色长卷发与弯卷呆毛，暖琥珀双瞳，侧边编发缀着向日葵与深棕蝴蝶结；身穿米白花纹短裙、深棕层叠裙摆和泡泡袖，搭配白袜与棕色搭扣鞋。",
+      "traits": ["沉稳", "细腻", "含蓄"]
+    },
+    "gemini": {
+      "navLabel": "猫耳",
+      "name": "Gemini",
+      "epithet": "星辰猫耳",
+      "tagline": "眼神明亮，喜欢新鲜事。",
+      "persona": "灵动好奇的星辰猫耳少女，眼神明亮，喜欢发现日常里的新鲜事。",
+      "appearance": "蓝紫色长卷发与环形呆毛，毛绒猫耳、琥珀双瞳，编发间点缀白花、深紫蝴蝶结与金色星饰；身穿白紫层叠短裙，配白袜和紫色搭扣鞋。",
+      "traits": ["灵动", "好奇", "明亮"]
+    },
+    "grok": {
+      "navLabel": "星冠",
+      "name": "Grok",
+      "epithet": "星冠双马尾",
+      "tagline": "笑里藏着一点狡黠。",
+      "persona": "机灵活泼的星冠少女，笑里带着一点狡黠与叛逆。",
+      "appearance": "金色长卷发扎成双马尾，清亮蓝瞳配精巧金色星冠；黑色蝴蝶结缀着星链与红宝石，身穿黑红层叠裙装和金纹饰边，搭配黑色连裤袜与搭扣厚底鞋。",
+      "traits": ["机灵", "活泼", "叛逆"]
+    }
+  }
+}

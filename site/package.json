@@ -6,7 +6,7 @@
     "predev": "node prepare-assets.mjs",
     "prebuild": "node prepare-assets.mjs",
     "dev": "next dev",
-    "build": "next build"
+    "build": "next build && cp out/index out/index.html"
   },
   "dependencies": {
     "@tailwindcss/postcss": "^4.3.3",

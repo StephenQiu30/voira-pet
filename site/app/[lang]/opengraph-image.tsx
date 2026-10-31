@@ -1,6 +1,10 @@
 import { ImageResponse } from "next/og";
+import { locales } from "@/i18n/locales";
 
 export const dynamic = "force-static";
+export function generateStaticParams() {
+  return locales.map((lang) => ({ lang }));
+}
 export const alt =
   "Voira Pet：DeepSeek、ChatGPT、Claude、Gemini 与 Grok 的 Q 版宠物。源代码在 github.com/StephenQiu30/voira-pet";
 export const size = { width: 1200, height: 630 };

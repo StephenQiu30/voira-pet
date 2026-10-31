@@ -2,7 +2,8 @@
 
 > Voira Pet 是 ChatGPT Work 的 Q 版宠物安装器，收录 DeepSeek、ChatGPT、Claude、Gemini 与 Grok 五位原创伙伴。运行 npx voira-pet 即可安装。角色名只用来区分伙伴，不代表接入同名模型，也不是模型厂商的官方形象。
 
-展示页：https://voira-pet.vercel.app
+展示页：https://voira-pet.vercel.app/zh-CN/
+English: https://voira-pet.vercel.app/en/
 源代码：https://github.com/StephenQiu30/voira-pet
 npm：https://www.npmjs.com/package/voira-pet
 Release v0.5.0：https://github.com/StephenQiu30/voira-pet/releases/tag/v0.5.0
@@ -28,3 +29,12 @@ Release v0.5.0：https://github.com/StephenQiu30/voira-pet/releases/tag/v0.5.0
 - Claude · 向日葵：沉稳细腻，温柔含蓄，笑意温暖。
 - Gemini · 星辰猫耳：灵动好奇，眼神明亮，喜欢发现日常里的新鲜事。
 - Grok · 星冠双马尾：机灵活泼，笑里带着一点狡黠与叛逆。
+
+## English
+
+Voira Pet installs Q-version pets for ChatGPT Work: DeepSeek, ChatGPT, Claude, Gemini, and Grok. Run `npx voira-pet` to install DeepSeek. The names only tell the five companions apart. They do not connect to the models of the same name, and they are not official artwork from those companies.
+
+- Site: https://voira-pet.vercel.app/en/
+- Source: https://github.com/StephenQiu30/voira-pet
+- npm: https://www.npmjs.com/package/voira-pet
+- Opening the site root follows a saved `voira-locale` choice, otherwise the browser language. English opens `/en/`. Everything else opens `/zh-CN/`.

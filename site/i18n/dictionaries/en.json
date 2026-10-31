@@ -1,0 +1,137 @@
+{
+  "meta": {
+    "title": "Voira Pet · Five Q-version companions",
+    "description": "Voira Pet installs Q-version pets for ChatGPT Work, with five original companions: DeepSeek, ChatGPT, Claude, Gemini, and Grok. Run npx voira-pet to install them. The source is in the GitHub repository StephenQiu30/voira-pet.",
+    "keywords": ["Voira Pet", "ChatGPT Work", "Q-version pet", "npx voira-pet", "DeepSeek", "ChatGPT", "Claude", "Gemini", "Grok", "StephenQiu30"]
+  },
+  "nav": {
+    "skip": "Skip to installation",
+    "open": "Open navigation",
+    "menu": "Menu",
+    "github": "GitHub repository",
+    "install": "Install",
+    "switchLocale": "Switch to 中文"
+  },
+  "home": {
+    "badge": "ChatGPT Work pets",
+    "lead": "Five Q-version companions",
+    "intro": "A gentle whale girl, a quiet dragon, a warm sunflower, a curious cat-eared girl, and a star-crowned girl with a clever smile.",
+    "sourceBefore": "Voira Pet installs Q-version pets for ChatGPT Work. Run npx voira-pet to install them. The source is in the",
+    "sourceLink": "GitHub repository StephenQiu30/voira-pet",
+    "sourceAfter": "."
+  },
+  "media": {
+    "traits": "Traits",
+    "portraitAlt": "{name} · {epithet}, transparent portrait",
+    "previewAlt": "Animation preview of {epithet}",
+    "previewCaption": "Animation preview",
+    "cardAlt": "{name} · {epithet} character sheet, with expressions, poses, and clothing",
+    "cardCaption": "Character sheet"
+  },
+  "install": {
+    "title": "How to install",
+    "introBefore": "Node.js 20 or newer is required. One command puts the pet files in the desktop client's local folder. After that, open ",
+    "settings": "Settings → Pets",
+    "introAfter": ", refresh, and choose her. The installer does not switch the pet you are using. A local install is also separate from Pets saved in the web app.",
+    "quick": "Quick install",
+    "choose": "Choose one",
+    "zip": "Download a package",
+    "quickBody": "With no argument, DeepSeek is installed.",
+    "chooseBody": "Each of the five can be installed on its own, and all of them can stay together. Installing the same files again leaves them as they are. If the destination already has different content, installation stops and does not overwrite it.",
+    "zipBody": "Without Node.js, download that character's ZIP from GitHub Release v0.5.0. Unzip it and place the whole folder in the client's pets directory, keeping pet.json and spritesheet.webp. The same Release also includes the npm package and SHA-256 checksums.",
+    "releaseLink": "Open GitHub Release v0.5.0",
+    "pathTitle": "Install location and more commands",
+    "pathBody": "The default location is ~/.codex/pets/. If CODEX_HOME is set, the pets/ directory inside it is used. Each character is stored in its own voira-name folder.",
+    "customDir": "npx voira-pet install grok --dir \"/your/pets\"",
+    "githubTitle": "Install a fixed version from GitHub",
+    "githubBody": "The command below downloads the 0.5.0 package. Replace the final grok with another character name. npm 12 needs --allow-remote=root to allow this remote download. It applies only to this command and does not change the global npm configuration.",
+    "npmDocs": "npm documentation",
+    "npm": "npm 0.5.0",
+    "download": "GitHub download",
+    "issues": "Report an issue",
+    "copy": "Copy command",
+    "copied": "Copied"
+  },
+  "faq": {
+    "title": "Questions",
+    "items": [
+      {
+        "id": "what",
+        "question": "What is Voira Pet?",
+        "answer": "Voira Pet collects portraits, character sheets, and animations for five original Q-version companions: DeepSeek, ChatGPT, Claude, Gemini, and Grok, and provides a local installer. The names only tell these five apart. They do not connect to the models of the same name, and they are not official artwork from those companies."
+      },
+      {
+        "id": "install",
+        "question": "How do I install the pets?",
+        "answer": "Node.js 20 or newer is required. npx voira-pet installs DeepSeek. Use npx voira-pet install chatgpt, claude, gemini, or grok for the others. All five can stay together. Different content already in the destination is not overwritten. Afterward, open Settings → Pets in a desktop client that supports v2 custom pets, refresh, and choose. The installer does not switch the pet you are using."
+      },
+      {
+        "id": "source",
+        "question": "Where are the source and the files?",
+        "answer": "The source, installer, and finished pet files are in the GitHub repository https://github.com/StephenQiu30/voira-pet . The site is https://voira-pet.vercel.app . The npm package is https://www.npmjs.com/package/voira-pet . Without Node.js, download a character ZIP from GitHub Release v0.5.0."
+      },
+      {
+        "id": "maintainer",
+        "question": "Who maintains this project?",
+        "answer": "The author is StephenQiu30, an AI application engineer in Shanghai, working on RAG and AI agents. Email stephenqiu03@gmail.com . GitHub: https://github.com/StephenQiu30 ."
+      }
+    ]
+  },
+  "footer": {
+    "disclaimer": "These names only tell the five original companions apart. They do not connect to the models of the same name, and they are not official artwork from those companies.",
+    "role": "AI Application Engineer · RAG and AI agents · Shanghai"
+  },
+  "theme": {
+    "label": "Switch theme",
+    "light": "Light",
+    "dark": "Dark",
+    "system": "System"
+  },
+  "pets": {
+    "deepseek": {
+      "navLabel": "Fish",
+      "name": "DeepSeek",
+      "epithet": "Blue Big Fish",
+      "tagline": "Gentle, with a little clever spark.",
+      "persona": "A whale girl raised with love. Patient and gentle, easygoing with a little clever spark.",
+      "appearance": "Mist-blue hair with a curved cowlick, bright blue eyes, a white pleated headpiece and a sapphire bow. She wears a pearl-white and sea-blue sailor dress, with a round little whale beside her.",
+      "traits": ["Patient", "Easygoing", "Clever"]
+    },
+    "chatgpt": {
+      "navLabel": "Dragon",
+      "name": "ChatGPT",
+      "epithet": "Silver Dragon",
+      "tagline": "Quiet and bright, with a little stubborn streak.",
+      "persona": "A quiet, bright silver dragon. Thoughtful and gentle, sometimes a little stubborn.",
+      "appearance": "Silver-white hair, a curled cowlick, two white horns, and pale purple eyes, with pointed ears and softly round cheeks. Silver knots, tassels, and an amethyst pendant, a silver embroidered dress with wide sleeves, and crystal shoes.",
+      "traits": ["Thoughtful", "Calm", "Stubborn"]
+    },
+    "claude": {
+      "navLabel": "Sunflower",
+      "name": "Claude",
+      "epithet": "Sunflower",
+      "tagline": "Steady and attentive, with a warm smile.",
+      "persona": "A steady, attentive sunflower girl. Gentle and reserved, with a warm smile.",
+      "appearance": "Copper-orange curls and a curled cowlick, warm amber eyes, a side braid with a sunflower and a dark brown bow. A cream patterned dress, a layered brown hem, puffed sleeves, white socks, and brown buckle shoes.",
+      "traits": ["Steady", "Attentive", "Reserved"]
+    },
+    "gemini": {
+      "navLabel": "Cat",
+      "name": "Gemini",
+      "epithet": "Starlit Cat",
+      "tagline": "Bright eyes, fond of something new.",
+      "persona": "A lively, curious cat-eared girl. Bright eyes, and a liking for the new things in an ordinary day.",
+      "appearance": "Blue-purple curls and a looped cowlick, fluffy cat ears, amber eyes, a braid with white flowers, a deep purple bow, and gold stars. A white and purple layered dress, white socks, and purple buckle shoes.",
+      "traits": ["Lively", "Curious", "Bright"]
+    },
+    "grok": {
+      "navLabel": "Crown",
+      "name": "Grok",
+      "epithet": "Star-crowned Twintails",
+      "tagline": "A little mischief in the smile.",
+      "persona": "A quick, lively star-crowned girl. A smile with a little mischief and a rebellious streak.",
+      "appearance": "Long golden curls in twintails, clear blue eyes, and a small gold star crown. A black bow with a star chain and a ruby, a black and red layered dress with gold trim, black tights, and thick buckle shoes.",
+      "traits": ["Quick", "Lively", "Rebellious"]
+    }
+  }
+}

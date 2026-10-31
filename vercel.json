@@ -2,13 +2,38 @@
   "installCommand": "npm install --prefix site",
   "buildCommand": "npm run build --prefix site",
   "outputDirectory": "site/out",
+  "redirects": [
+    {
+      "source": "/",
+      "has": [{ "type": "cookie", "key": "voira-locale", "value": "^en$" }],
+      "destination": "/en/",
+      "permanent": false
+    },
+    {
+      "source": "/",
+      "has": [{ "type": "cookie", "key": "voira-locale", "value": "^zh-CN$" }],
+      "destination": "/zh-CN/",
+      "permanent": false
+    },
+    {
+      "source": "/",
+      "has": [{ "type": "header", "key": "accept-language", "value": "^en([-,;]|$)" }],
+      "destination": "/en/",
+      "permanent": false
+    },
+    {
+      "source": "/",
+      "destination": "/zh-CN/",
+      "permanent": false
+    }
+  ],
   "headers": [
     {
-      "source": "/opengraph-image",
+      "source": "/:lang/opengraph-image",
       "headers": [{ "key": "Content-Type", "value": "image/png" }]
     },
     {
-      "source": "/twitter-image",
+      "source": "/:lang/twitter-image",
       "headers": [{ "key": "Content-Type", "value": "image/png" }]
     }
   ]

@@ -1,5 +1,6 @@
 import { Menu } from "lucide-react";
 import { pets } from "@/app/pets";
+import { LocaleSwitch } from "@/components/locale-switch";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { Button, buttonVariants } from "@/components/ui/button";
 import {
@@ -16,6 +17,9 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
+import type { Dictionary } from "@/i18n/dictionary";
+import type { Locale } from "@/i18n/locales";
+import { repoUrl } from "@/lib/site";
 
 function GitHubMark() {
   return (
@@ -25,61 +29,54 @@ function GitHubMark() {
   );
 }
 
-export function SiteHeader() {
+export function SiteHeader({
+  locale,
+  copy,
+  theme,
+  profiles,
+}: {
+  locale: Locale;
+  copy: Dictionary["nav"];
+  theme: Dictionary["theme"];
+  profiles: Dictionary["pets"];
+}) {
   return (
     <header className="sticky top-0 z-10 bg-background">
       <div className="mx-auto flex w-full max-w-6xl items-center gap-2 px-4 py-2 md:px-8">
         <Sheet>
           <SheetTrigger asChild>
-            <Button
-              variant="ghost"
-              size="icon"
-              className="size-11 md:hidden"
-              aria-label="打开导航"
-            >
+            <Button variant="ghost" size="icon" className="size-11 md:hidden" aria-label={copy.open}>
               <Menu className="size-4" />
             </Button>
           </SheetTrigger>
-          <SheetContent
-            side="left"
-            className="border-0 shadow-none data-[side=left]:border-r-0"
-          >
+          <SheetContent side="left" className="border-0 shadow-none data-[side=left]:border-r-0">
             <SheetHeader>
-              <SheetTitle>目录</SheetTitle>
+              <SheetTitle>{copy.menu}</SheetTitle>
             </SheetHeader>
-            <nav aria-label="目录" className="flex flex-col gap-1 px-4">
+            <nav aria-label={copy.menu} className="flex flex-col gap-1 px-4">
               <SheetClose asChild>
                 <a
-                  href="https://github.com/StephenQiu30/voira-pet"
-                  className={buttonVariants({
-                    variant: "ghost",
-                    className: "min-h-11 justify-start",
-                  })}
+                  href={repoUrl}
+                  className={buttonVariants({ variant: "ghost", className: "min-h-11 justify-start" })}
                 >
-                  GitHub 仓库
+                  {copy.github}
                 </a>
               </SheetClose>
               <SheetClose asChild>
                 <a
                   href="#install"
-                  className={buttonVariants({
-                    variant: "ghost",
-                    className: "min-h-11 justify-start",
-                  })}
+                  className={buttonVariants({ variant: "ghost", className: "min-h-11 justify-start" })}
                 >
-                  安装
+                  {copy.install}
                 </a>
               </SheetClose>
               {pets.map((pet) => (
                 <SheetClose asChild key={pet.id}>
                   <a
                     href={`#${pet.id}`}
-                    className={buttonVariants({
-                      variant: "ghost",
-                      className: "min-h-11 justify-start",
-                    })}
+                    className={buttonVariants({ variant: "ghost", className: "min-h-11 justify-start" })}
                   >
-                    {pet.navLabel}
+                    {profiles[pet.id].navLabel}
                   </a>
                 </SheetClose>
               ))}
@@ -89,24 +86,17 @@ export function SiteHeader() {
         <Button variant="ghost" className="min-h-11" asChild>
           <a href="#top">Voira Pet</a>
         </Button>
-        <NavigationMenu
-          viewport={false}
-          aria-label="目录"
-          className="hidden max-w-none flex-1 md:flex"
-        >
+        <NavigationMenu viewport={false} aria-label={copy.menu} className="hidden max-w-none flex-1 md:flex">
           <NavigationMenuList className="justify-center">
             <NavigationMenuItem>
               <NavigationMenuLink href="#install" className="min-h-11 px-3">
-                安装
+                {copy.install}
               </NavigationMenuLink>
             </NavigationMenuItem>
             {pets.map((pet) => (
               <NavigationMenuItem key={pet.id}>
-                <NavigationMenuLink
-                  href={`#${pet.id}`}
-                  className="min-h-11 px-3"
-                >
-                  {pet.navLabel}
+                <NavigationMenuLink href={`#${pet.id}`} className="min-h-11 px-3">
+                  {profiles[pet.id].navLabel}
                 </NavigationMenuLink>
               </NavigationMenuItem>
             ))}
@@ -114,14 +104,12 @@ export function SiteHeader() {
         </NavigationMenu>
         <div className="ml-auto flex items-center md:ml-0">
           <Button variant="ghost" size="icon" className="size-11" asChild>
-            <a
-              href="https://github.com/StephenQiu30/voira-pet"
-              aria-label="GitHub 仓库"
-            >
+            <a href={repoUrl} aria-label={copy.github}>
               <GitHubMark />
             </a>
           </Button>
-          <ThemeToggle />
+          <LocaleSwitch locale={locale} label={copy.switchLocale} />
+          <ThemeToggle copy={theme} />
         </div>
       </div>
     </header>
