@@ -1,6 +1,7 @@
 {
   "name": "voira-pet-site",
   "private": true,
+  "license": "MIT",
   "scripts": {
     "prepare-assets": "node prepare-assets.mjs",
     "predev": "node prepare-assets.mjs",
